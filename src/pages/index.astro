@@ -1,8 +1,8 @@
 ---
 // You can change these variables to update your site easily!
 const name = "Jacob Gumulak";
-const role = "this is my portfolio";
-const bio = "i play a da music";
+const role = "";
+const bio = "Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link"> Moravian University </a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .";
 ---
 
 <html lang="en">
@@ -70,6 +70,31 @@ const bio = "i play a da music";
 				font-size: 0.875rem;
 				font-weight: 500;
 			}
+			.school-link {
+  				color: #bfc0c0;
+  				text-decoration: none;
+  				font-weight: 600;
+  				border-bottom: 1px solid transparent;
+  				transition: all 0.2s ease;
+			}
+			.email-link {
+  				color: #3b82f6;
+				text-decoration: none;
+				font-weight: 500;
+				padding: 4px 8px;
+				background: #eff6ff; /* Very light blue background */
+				border-radius: 4px;
+				transition: all 0.2s;
+			}
+			.email-link:hover {
+  				background: #dbeafe; /* Slightly darker blue on hover */
+  				color: #1d4ed8;
+			}
+
+.school-link:hover {
+  color: #2563eb; /* Darker blue on hover */
+  border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
+}
 		</style>
 	</head>
 	<body>
@@ -80,7 +105,7 @@ const bio = "i play a da music";
 			</header>
 
 			<section class="about-section">
-				<h2>About Me</h2>
+				<h2>Welcome!</h2>
 				<p>{bio}</p>
 				<div class="status">🟢 fard</div>
 			</section>

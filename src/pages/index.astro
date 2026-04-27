@@ -69,7 +69,7 @@ const name = "Jacob Gumulak";
 				font-weight: 500;
 			}
 			.school-link {
-  				color: #bfc0c0;
+  				color: #00267A;
   				text-decoration: none;
   				font-weight: 600;
   				border-bottom: 1px solid transparent;
@@ -88,14 +88,51 @@ const name = "Jacob Gumulak";
   				background: #dbeafe; /* Slightly darker blue on hover */
   				color: #1d4ed8;
 			}
+			.navbar {
+				background-color: #ffffff;
+				border-bottom: 1px solid #e5e7eb;
+				padding: 1rem 0;
+				position: sticky; /* This keeps the menu at the top when you scroll */
+				top: 0;
+				z-index: 100;
+			}
 
-.school-link:hover {
-  color: #2563eb; /* Darker blue on hover */
-  border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
-}
+			.nav-container {
+				max-width: 800px;
+				margin: 0 auto;
+				display: flex;
+				gap: 2rem; /* Space between tabs */
+				padding: 0 2rem;
+			}
+
+			.nav-link {
+				text-decoration: none;
+				color: #4b5563;
+				font-weight: 500;
+				font-size: 1rem;
+				transition: color 0.2s;
+			}
+
+			.nav-link:hover {
+				color: #3b82f6; /* Turns blue when you hover */
+			}
+
+			.school-link:hover {
+  				color: #2563eb; /* Darker blue on hover */
+  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
+			}
 		</style>
 	</head>
 	<body>
+		<nav class="navbar">
+  			<div class="nav-container">
+    			<a href="/" class="nav-link">Home</a>
+    			<a href="/about" class="nav-link">About</a>
+    			<a href="/lessons" class="nav-link">Lesson Plans</a>
+    			<a href="/media" class="nav-link">Media</a>
+    			<a href="mailto:your@email.com" class="nav-link contact-tab">Contact</a>
+  	</div>
+</nav>
 		<main class="container">
 			<header>
 				<h1>{name}</h1>

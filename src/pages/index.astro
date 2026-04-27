@@ -1,19 +1,84 @@
 ---
-// This is the "Frontmatter" - keep it empty for now
+// You can change these variables to update your site easily!
+const name = "Jacob Gumulak";
+const role = "test";
+const bio = "i play a da music";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>My Cloudflare Site</title>
+		<title>{name} | Portfolio</title>
 		<style>
-			body { font-family: sans-serif; display: grid; place-content: center; height: 100vh; background: #f0f4f8; }
-			h1 { color: #2d3748; border-bottom: 2px solid #3182ce; }
+			:root {
+				--primary: #3b82f6;
+				--text: #1f2937;
+				--bg: #ffffff;
+			}
+			body { 
+				font-family: 'Inter', sans-serif; 
+				line-height: 1.6; 
+				color: var(--text); 
+				margin: 0;
+				background-color: var(--bg);
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 4rem 2rem;
+			}
+			header {
+				margin-bottom: 3rem;
+			}
+			h1 {
+				font-size: 3rem;
+				margin: 0;
+				color: #111;
+			}
+			.role {
+				color: var(--primary);
+				font-weight: 600;
+				font-size: 1.25rem;
+			}
+			.about-section {
+				background: #f9fafb;
+				padding: 2rem;
+				border-radius: 1rem;
+				border: 1px solid #e5e7eb;
+			}
+			h2 {
+				margin-top: 0;
+				font-size: 1.5rem;
+			}
+			p {
+				font-size: 1.125rem;
+				color: #4b5563;
+			}
+			.status {
+				display: inline-block;
+				margin-top: 1rem;
+				padding: 0.25rem 0.75rem;
+				background: #dcfce7;
+				color: #166534;
+				border-radius: 9999px;
+				font-size: 0.875rem;
+				font-weight: 500;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>hello please work</h1>
-		<p>does it work please say yes please</p>
+		<main class="container">
+			<header>
+				<div class="role">{role}</div>
+				<h1>Hey, I'm {name}.</h1>
+			</header>
+
+			<section class="about-section">
+				<h2>About Me</h2>
+				<p>{bio}</p>
+				<div class="status">🟢 Available for new projects</div>
+			</section>
+		</main>
 	</body>
 </html>

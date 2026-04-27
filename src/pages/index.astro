@@ -97,12 +97,13 @@ const name = "Jacob Gumulak";
 				z-index: 100;
 			}
 
+						/* Base styles for all devices */
 			.nav-container {
 				max-width: 800px;
 				margin: 0 auto;
 				display: flex;
-				gap: 2rem; /* Space between tabs */
-				padding: 0 2rem;
+				align-items: center;
+				padding: 0 1.5rem;
 			}
 
 			.nav-link {
@@ -111,6 +112,30 @@ const name = "Jacob Gumulak";
 				font-weight: 500;
 				font-size: 1rem;
 				transition: color 0.2s;
+				padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
+			}
+
+			/* 📱 Mobile Specific Styles (Screens smaller than 600px) */
+			@media (max-width: 600px) {
+			.nav-container {
+				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
+				justify-content: center; /* Centers tabs on mobile */
+				gap: 0.5rem;
+			}
+			
+			.nav-link {
+				font-size: 0.9rem; /* Slightly smaller text for mobile */
+				padding: 0.4rem 0.6rem;
+				background: #f3f4f6; /* Adds a light "button" feel to each tab */
+				border-radius: 6px;
+			}
+
+			.contact-tab {
+				margin-left: 0; /* Resets the "push to right" on mobile */
+				width: 100%; /* Makes contact button full width on mobile */
+				text-align: center;
+				margin-top: 0.5rem;
+			}
 			}
 
 			.nav-link:hover {

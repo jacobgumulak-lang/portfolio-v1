@@ -1,5 +1,4 @@
 ---
-// You can change these variables to update your site easily!
 const name = "Resume";
 ---
 
@@ -66,6 +65,12 @@ const name = "Resume";
   				border-bottom: 1px solid transparent;
   				transition: all 0.2s ease;
 			}
+
+            .coverletter-link {
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 400;
+            }
 			.email-link {
   				color: #3b82f6;
 				text-decoration: none;
@@ -102,38 +107,38 @@ const name = "Resume";
 			font-weight: 500;
 			font-size: 1rem;
 			transition: color 0.2s;
-			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
+			padding: 0.5rem 0.75rem;
 			}
 
 			@media (max-width: 600px) {
 			.nav-container {
-				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
-				justify-content: center; /* Centers tabs on mobile */
+				flex-wrap: wrap;
+				justify-content: center;
 				gap: 0.5rem;
 			}
 			
 			.nav-link {
-				font-size: 0.9rem; /* Slightly smaller text for mobile */
+				font-size: 0.9rem;
 				padding: 0.4rem 0.6rem;
-				background: #f3f4f6; /* Adds a light "button" feel to each tab */
+				background: #f3f4f6;
 				border-radius: 6px;
 			}
 
 			.contact-tab {
-				margin-left: 0; /* Resets the "push to right" on mobile */
-				width: 100%; /* Makes contact button full width on mobile */
+				margin-left: 0;
+				width: 100%;
 				text-align: center;
 				margin-top: 0.5rem;
 			}
 			}
 
 			.nav-link:hover {
-				color: #3b82f6; /* Turns blue when you hover */
+				color: #3b82f6;
 			}
 
 			.school-link:hover {
-  				color: #2563eb; /* Darker blue on hover */
-  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
+  				color: #2563eb;
+  				border-bottom: 1px solid #2563eb;
 			}
 .resume-container {
   max-width: 800px;
@@ -223,7 +228,10 @@ li {
   <header class="resume-header">
     <h1>Jacob Gumulak</h1>
     <p>
-      <a href="mailto:jacobgumulak@gmail.com">jacobgumulak@gmail.com</a> | (908)-619-7586 | Bethlehem, PA
+      <a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a> | (908)-619-7586 | Bethlehem, PA
+    </p>
+    <p>
+          <a href="https://drive.google.com/file/d/1mdw6mxp3Ke8vRkdmUZuiLHuwUyqijkZI/view?usp=sharing" target="_blank" class="coverletter-link">Cover Letter</a>
     </p>
   </header>
 

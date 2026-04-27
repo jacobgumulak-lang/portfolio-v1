@@ -97,20 +97,45 @@ const name = "Lessons";
 				z-index: 100;
 			}
 
+						/* Base styles for all devices */
 			.nav-container {
 				max-width: 800px;
 				margin: 0 auto;
 				display: flex;
-				gap: 2rem; /* Space between tabs */
-				padding: 0 2rem;
+				align-items: center;
+				padding: 0 1.5rem;
 			}
 
 			.nav-link {
-				text-decoration: none;
-				color: #4b5563;
-				font-weight: 500;
-				font-size: 1rem;
-				transition: color 0.2s;
+			text-decoration: none;
+			color: #4b5563;
+			font-weight: 500;
+			font-size: 1rem;
+			transition: color 0.2s;
+			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
+			}
+
+			/* 📱 Mobile Specific Styles (Screens smaller than 600px) */
+			@media (max-width: 600px) {
+			.nav-container {
+				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
+				justify-content: center; /* Centers tabs on mobile */
+				gap: 0.5rem;
+			}
+			
+			.nav-link {
+				font-size: 0.9rem; /* Slightly smaller text for mobile */
+				padding: 0.4rem 0.6rem;
+				background: #f3f4f6; /* Adds a light "button" feel to each tab */
+				border-radius: 6px;
+			}
+
+			.contact-tab {
+				margin-left: 0; /* Resets the "push to right" on mobile */
+				width: 100%; /* Makes contact button full width on mobile */
+				text-align: center;
+				margin-top: 0.5rem;
+			}
 			}
 
 			.nav-link:hover {
@@ -139,9 +164,9 @@ const name = "Lessons";
 			</header>
 
 			<section class="about-section">
-				<h2></h2>
-				<p></p>
-				<div class="status"></div>
+				<h2>Welcome!</h2>
+				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link"> Moravian University </a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
+				<div class="status">🟢 fard</div>
 			</section>
 		</main>
 	</body>

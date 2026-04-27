@@ -58,16 +58,7 @@ const name = "Lessons";
 				font-size: 1.125rem;
 				color: #4b5563;
 			}
-			.status {
-				display: inline-block;
-				margin-top: 1rem;
-				padding: 0.25rem 0.75rem;
-				background: #dcfce7;
-				color: #166534;
-				border-radius: 9999px;
-				font-size: 0.875rem;
-				font-weight: 500;
-			}
+
 			.school-link {
   				color: #00267A;
   				text-decoration: none;
@@ -80,24 +71,23 @@ const name = "Lessons";
 				text-decoration: none;
 				font-weight: 500;
 				padding: 4px 8px;
-				background: #eff6ff; /* Very light blue background */
-				border-radius: 4px;
+				background: #eff6ff;
+				border-radius: 3px;
 				transition: all 0.2s;
 			}
 			.email-link:hover {
-  				background: #dbeafe; /* Slightly darker blue on hover */
+  				background: #dbeafe;
   				color: #1d4ed8;
 			}
 			.navbar {
 				background-color: #ffffff;
 				border-bottom: 1px solid #e5e7eb;
 				padding: 1rem 0;
-				position: sticky; /* This keeps the menu at the top when you scroll */
+				position: sticky;
 				top: 0;
 				z-index: 100;
 			}
 
-						/* Base styles for all devices */
 			.nav-container {
 				max-width: 800px;
 				margin: 0 auto;
@@ -115,7 +105,6 @@ const name = "Lessons";
 			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
 			}
 
-			/* 📱 Mobile Specific Styles (Screens smaller than 600px) */
 			@media (max-width: 600px) {
 			.nav-container {
 				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
@@ -155,7 +144,8 @@ const name = "Lessons";
     			<a href="/about" class="nav-link">About</a>
     			<a href="/lessons" class="nav-link">Lesson Plans</a>
     			<a href="/media" class="nav-link">Media</a>
-    			<a href="mailto:your@email.com" class="nav-link contact-tab">Contact</a>
+                <a href="/philosophy" class="nav-link">Philosophy</a>
+				<a href="/resume" class="nav-link">Resume</a>
   	</div>
 </nav>
 		<main class="container">
@@ -165,8 +155,7 @@ const name = "Lessons";
 
 			<section class="about-section">
 				<h2>Welcome!</h2>
-				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link"> Moravian University </a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
-				<div class="status">🟢 fard</div>
+				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
 			</section>
 		</main>
 	</body>

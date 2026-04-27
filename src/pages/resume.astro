@@ -1,0 +1,309 @@
+---
+// You can change these variables to update your site easily!
+const name = "Resume";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{name} | Portfolio</title>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<style>
+			:root {
+				--primary: #3b82f6;
+				--text: #1f2937;
+				--bg: #ffffff;
+			}
+			body { 
+				font-family: 'Inter', sans-serif; 
+				line-height: 1.6; 
+				color: var(--text); 
+				margin: 0;
+				background-color: var(--bg);
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 4rem 2rem;
+			}
+			header {
+				margin-bottom: 3rem;
+			}
+			h1 {
+				font-size: 3rem;
+				margin: 0;
+				color: #111;
+			}
+			.role {
+				color: var(--primary);
+				font-weight: 600;
+				font-size: 1.25rem;
+			}
+			.about-section {
+				background: #f9fafb;
+				padding: 2rem;
+				border-radius: 1rem;
+				border: 1px solid #e5e7eb;
+			}
+			h2 {
+				margin-top: 0;
+				font-size: 1.5rem;
+			}
+			p {
+				font-size: 1.125rem;
+				color: #4b5563;
+			}
+
+			.school-link {
+  				color: #00267A;
+  				text-decoration: none;
+  				font-weight: 600;
+  				border-bottom: 1px solid transparent;
+  				transition: all 0.2s ease;
+			}
+			.email-link {
+  				color: #3b82f6;
+				text-decoration: none;
+				font-weight: 500;
+				padding: 4px 8px;
+				background: #eff6ff;
+				border-radius: 3px;
+				transition: all 0.2s;
+			}
+			.email-link:hover {
+  				background: #dbeafe;
+  				color: #1d4ed8;
+			}
+			.navbar {
+				background-color: #ffffff;
+				border-bottom: 1px solid #e5e7eb;
+				padding: 1rem 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			.nav-container {
+				max-width: 800px;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+				padding: 0 1.5rem;
+			}
+
+			.nav-link {
+			text-decoration: none;
+			color: #4b5563;
+			font-weight: 500;
+			font-size: 1rem;
+			transition: color 0.2s;
+			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
+			}
+
+			@media (max-width: 600px) {
+			.nav-container {
+				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
+				justify-content: center; /* Centers tabs on mobile */
+				gap: 0.5rem;
+			}
+			
+			.nav-link {
+				font-size: 0.9rem; /* Slightly smaller text for mobile */
+				padding: 0.4rem 0.6rem;
+				background: #f3f4f6; /* Adds a light "button" feel to each tab */
+				border-radius: 6px;
+			}
+
+			.contact-tab {
+				margin-left: 0; /* Resets the "push to right" on mobile */
+				width: 100%; /* Makes contact button full width on mobile */
+				text-align: center;
+				margin-top: 0.5rem;
+			}
+			}
+
+			.nav-link:hover {
+				color: #3b82f6; /* Turns blue when you hover */
+			}
+
+			.school-link:hover {
+  				color: #2563eb; /* Darker blue on hover */
+  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
+			}
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.resume-header {
+  text-align: center;
+  border-bottom: 2px solid #111;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #2563eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.role {
+  font-style: italic;
+  font-weight: 500;
+  color: #4b5563;
+  margin: 0.25rem 0;
+}
+
+.stats, .awards {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+  			<div class="nav-container">
+    			<a href="/" class="nav-link">Home</a>
+    			<a href="/about" class="nav-link">About</a>
+    			<a href="/lessons" class="nav-link">Lesson Plans</a>
+    			<a href="/media" class="nav-link">Media</a>
+                <a href="/philosophy" class="nav-link">Philosophy</a>
+				<a href="/resume" class="nav-link">Resume</a>
+  	</div>
+</nav>
+		<main class="container">
+<section class="resume-container">
+<section class="resume-container">
+  <header class="resume-header">
+    <h1>Jacob Gumulak</h1>
+    <p>
+      <a href="mailto:jacobgumulak@gmail.com">jacobgumulak@gmail.com</a> | (908)-619-7586 | Bethlehem, PA
+    </p>
+  </header>
+
+  <div class="resume-section">
+    <h3>Education</h3>
+    <div class="entry">
+      <div class="row">
+        <strong>Moravian University</strong>
+        <span>Bethlehem, PA</span>
+      </div>
+      <div class="row">
+        <span>Bachelor of Music, PK-12 Education</span>
+        <span>May 2026</span>
+      </div>
+      <p class="stats">GPA: 3.02 | Dean’s List (2025)</p>
+      <p class="awards">
+        <strong>Awards & Honors:</strong> Winner, Moravian University Concerto Competition (2025); Al Lazaro Memorial Jazz Prize (2025); Distinguished Young Musician Award (2022-2026); John H. Reimers Music Scholarship (2025-2026).
+      </p>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h3>Field Experience</h3>
+    
+    <div class="entry">
+      <div class="row">
+        <strong>Southern Lehigh High School</strong>
+        <span>Center Valley, PA</span>
+      </div>
+      <p class="role">Student Teaching: 9-12 Band, Orchestra, Jazz, & 4th Grade Instrumental | March–May 2026</p>
+      <ul>
+        <li>Co-taught concert band, string orchestra, symphony orchestra, and two jazz ensembles.</li>
+        <li>Taught fourth grade band lessons at the intermediate school level.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <strong>Cheston/March Elementary Schools</strong>
+        <span>Easton, PA</span>
+      </div>
+      <p class="role">Student Teaching: 4th–5th Grade Instrumental Music | Jan–March 2026</p>
+      <ul>
+        <li>Managed instrumental lessons and ensembles across two elementary school buildings.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <strong>Northampton Area Middle School</strong>
+        <span>Northampton, PA</span>
+      </div>
+      <p class="role">Pre-Student Teaching: 7th–8th Grade General Music and Choir | Sept–Nov 2025</p>
+      <ul>
+        <li>Integrated technology into 8th grade general music to teach jazz history.</li>
+        <li>Led 7th grade choir rehearsals using functional piano skills and Kodály methods.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h3>Research & Presentations</h3>
+    <div class="entry">
+      <strong>Lead Researcher: Rediscovering the Hollywood Saxophone Quartet (SOAR)</strong>
+      <ul>
+        <li>Presented findings at the Jazz Education Network (JEN) Conference in Atlanta, GA (Jan 2025).</li>
+        <li>Invited to perform at the COTA festival (Sept 2025) and PMEA Conference (April 2026).</li>
+        <li>Co-researched history and music using academic resources and University-owned materials.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h3>Skills & Certifications</h3>
+    <p><strong>Musicianship:</strong> Concentration in Jazz Saxophone; Proficient in Woodwinds, Brass, Strings, and Percussion. Active in University Choir, Jazz Band, and Saxophone Quartet.</p>
+    <p><strong>Technology:</strong> Proficient in Musescore, Finale, Soundtrap, Garageband, FL Studio, SmartMusic, Flat.io, and Canva.</p>
+    <p><strong>Certifications & Clearances:</strong> CPR/AED/First Aid Certified (Exp. 2028). PA Clearances: Act 34, 151, 114.</p>
+    <p><strong>Affiliations:</strong> NAfME, PMEA, JEN.</p>
+  </div>
+</section>
+		</main>
+	</body>
+</html>

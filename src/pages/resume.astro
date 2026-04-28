@@ -204,10 +204,47 @@ li {
   margin-bottom: 0.5rem;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the button on the page */
+  margin: 2rem 0;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2563eb; /* Matches your professional blue */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px); /* Gives a slight "lift" on hover */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  /* Keeps the SVG icon aligned with the text */
+  margin-top: 2px;
+}
+
 @media (max-width: 600px) {
   .row {
     flex-direction: column;
   }
+
 }
 		</style>
 	</head>
@@ -215,10 +252,10 @@ li {
 		<nav class="navbar">
   			<div class="nav-container">
     			<a href="/" class="nav-link">Home</a>
+				<a href="/philosophy" class="nav-link">Philosophy</a>
     			<a href="/about" class="nav-link">About</a>
     			<a href="/lessons" class="nav-link">Lesson Plans</a>
     			<a href="/media" class="nav-link">Media</a>
-                <a href="/philosophy" class="nav-link">Philosophy</a>
 				<a href="/resume" class="nav-link">Resume</a>
   	</div>
 </nav>
@@ -311,6 +348,14 @@ li {
     <p><strong>Certifications & Clearances:</strong> CPR/AED/First Aid Certified (Exp. 2028). PA Clearances: Act 34, 151, 114.</p>
     <p><strong>Affiliations:</strong> NAfME, PMEA, JEN.</p>
   </div>
+
+<div class="button-container">
+  <a href="/jacob.gumulak.resume.pdf" download class="download-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+    Download My Resume
+  </a>
+</div>
+
 </section>
 		</main>
 	</body>

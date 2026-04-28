@@ -105,6 +105,70 @@ const name = "Jacob Gumulak";
 			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
 			}
 
+			/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* Tile Grid */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+}
+
+.tile {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 15px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tile:hover {
+  transform: translateY(-10px);
+  border-color: #2563eb;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.tile-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tile h3 {
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.tile p {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 			@media (max-width: 600px) {
 			.nav-container {
 				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
@@ -141,10 +205,10 @@ const name = "Jacob Gumulak";
 		<nav class="navbar">
   			<div class="nav-container">
     			<a href="/" class="nav-link">Home</a>
+				<a href="/philosophy" class="nav-link">Philosophy</a>
     			<a href="/about" class="nav-link">About</a>
     			<a href="/lessons" class="nav-link">Lesson Plans</a>
     			<a href="/media" class="nav-link">Media</a>
-                <a href="/philosophy" class="nav-link">Philosophy</a>
 				<a href="/resume" class="nav-link">Resume</a>
   	</div>
 </nav>
@@ -157,6 +221,39 @@ const name = "Jacob Gumulak";
 				<h2>Welcome!</h2>
 				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
 			</section>
+
+			<div class="tile-grid">
+  <a href="/philosophy" class="tile">
+    <div class="tile-icon">🎶</div>
+    <h3>Philosophy</h3>
+    <p>My approach to K-12 and Instrumental music education.</p>
+  </a>
+
+  <a href="/about" class="tile">
+    <div class="tile-icon">🎬</div>
+    <h3>About</h3>
+    <p>Conducting videos, jazz performances, and classroom observations.</p>
+  </a>
+
+  <a href="/lessons" class="tile">
+    <div class="tile-icon">📚</div>
+    <h3>Lesson Plans</h3>
+    <p>Interactive previews of my curriculum and teaching materials.</p>
+  </a>
+
+  <a href="/media" class="tile">
+    <div class="tile-icon">🎷</div>
+    <h3>Media</h3>
+    <p>My journey through Moravian University and student teaching.</p>
+  </a>
+
+    <a href="/resume" class="tile">
+    <div class="tile-icon">🎷</div>
+    <h3>Resume</h3>
+    <p>My journey through Moravian University and student teaching.</p>
+  </a>
+</div>
+
 		</main>
 	</body>
 </html>

@@ -59,26 +59,6 @@ const name = "Philosophy";
 				color: #4b5563;
 			}
 
-			.school-link {
-  				color: #00267A;
-  				text-decoration: none;
-  				font-weight: 600;
-  				border-bottom: 1px solid transparent;
-  				transition: all 0.2s ease;
-			}
-			.email-link {
-  				color: #3b82f6;
-				text-decoration: none;
-				font-weight: 500;
-				padding: 4px 8px;
-				background: #eff6ff;
-				border-radius: 3px;
-				transition: all 0.2s;
-			}
-			.email-link:hover {
-  				background: #dbeafe;
-  				color: #1d4ed8;
-			}
 			.navbar {
 				background-color: #ffffff;
 				border-bottom: 1px solid #e5e7eb;
@@ -127,14 +107,49 @@ const name = "Philosophy";
 			}
 			}
 
-			.nav-link:hover {
-				color: #3b82f6; /* Turns blue when you hover */
-			}
+.philosophy-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  line-height: 1.8;
+  color: #374151;
+}
 
-			.school-link:hover {
-  				color: #2563eb; /* Darker blue on hover */
-  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
-			}
+.philosophy-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Subtle accent line under the title */
+.philosophy-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.philosophy-block p {
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* Adds a nice "callout" effect to your final goal */
+.philosophy-block p:last-child {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-left: 5px solid #2563eb;
+  font-style: italic;
+}
+
+strong {
+  color: #111;
+}
 		</style>
 	</head>
 	<body>
@@ -153,9 +168,20 @@ const name = "Philosophy";
 				<h1>{name}</h1>
 			</header>
 
-			<section class="about-section">
-				<h2>Welcome!</h2>
-				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
+			<section class="philosophy-container">
+  				<div class="philosophy-block">
+    				<p>
+     				 	As an educator, I aim for my classroom to be open, inviting, and inclusive, providing a safe space for students to comfortably explore self-expression and grow as both musicians and individuals. I believe that music education should be student-centered rather than teacher-centered; my role is to provide the tools and resources necessary for students to make their own musical discoveries and build a sense of community. As a jazz musician, I recognize that musical literacy and growth are deeply rooted in collaboration and the exchange of diverse viewpoints. By allowing students to work together and share ideas under my guidance, I strive to create a classroom environment where they become not just better musicians, but better people.
+    				</p>
+    
+					<p>
+     				 	To ensure students are truly invested in their learning, I advocate for a flexible, student-centered curriculum where they have a degree of ownership over the content. This includes staying culturally relevant by incorporating the genres and musicians that resonate with today’s connected youth. In my classroom, every group is a melting pot of different cultures, and I encourage students to teach one another about their unique heritages through music.
+    				</p>
+
+    				<p>
+      					Safety and inclusivity are the foundations of this exploration. I act as a mediator and facilitator, establishing clear boundaries to ensure feedback remains constructive and insightful rather than critical or judgmental. My classroom is inclusive of all students regardless of age, culture, or disability, with lessons specifically adapted to accommodate every learner. Ultimately, my goal is to create mentally and emotionally intelligent, well-rounded students who carry their love of music and the life skills gained in my classroom into all aspects of their lives.
+    				</p>
+  				</div>
 			</section>
 		</main>
 	</body>

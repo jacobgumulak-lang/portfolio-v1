@@ -59,26 +59,6 @@ const name = "Lessons";
 				color: #4b5563;
 			}
 
-			.school-link {
-  				color: #00267A;
-  				text-decoration: none;
-  				font-weight: 600;
-  				border-bottom: 1px solid transparent;
-  				transition: all 0.2s ease;
-			}
-			.email-link {
-  				color: #3b82f6;
-				text-decoration: none;
-				font-weight: 500;
-				padding: 4px 8px;
-				background: #eff6ff;
-				border-radius: 3px;
-				transition: all 0.2s;
-			}
-			.email-link:hover {
-  				background: #dbeafe;
-  				color: #1d4ed8;
-			}
 			.navbar {
 				background-color: #ffffff;
 				border-bottom: 1px solid #e5e7eb;
@@ -131,10 +111,36 @@ const name = "Lessons";
 				color: #3b82f6; /* Turns blue when you hover */
 			}
 
-			.school-link:hover {
-  				color: #2563eb; /* Darker blue on hover */
-  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
+			.pdf-container {
+				max-width: 900px;
+				margin: 3rem auto;
+				padding: 0 1rem;
+			}		
+
+			.pdf-container h3 {
+				color: #2563eb;
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
 			}
+
+			iframe {
+				border: 1px solid #e5e7eb;
+				border-radius: 8px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+			}
+
+			.pdf-caption {
+				margin-top: 1rem;
+				font-style: italic;
+				color: #4b5563;
+				text-align: center;
+			}
+
+@media (max-width: 600px) {
+  iframe {
+    height: 400px; /* Shorter height for mobile screens */
+  }
+}
 		</style>
 	</head>
 	<body>
@@ -154,8 +160,56 @@ const name = "Lessons";
 			</header>
 
 			<section class="about-section">
-				<h2>Welcome!</h2>
-				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
+				<div class="pdf-container">
+  					<h3>5th Grade Band: Introducing New Music</h3>
+		<iframe 
+    src="https://drive.google.com/file/d/1Uc4GNbZYyMyGktwpo7E7pHOGrBdvbNuo/preview" 
+    width="100%" 
+    height="600px" 
+    allow="autoplay">
+  		</iframe>
+		</div>
+
+		<div class="pdf-container">
+  <h3>Elementary General Music: Exploration & Discovery</h3>
+  <iframe 
+    src="https://drive.google.com/file/d/1qjuC3DE0VwMVtYi_Q5MsZD4L9dXwXV5T/preview" 
+    width="100%" 
+    height="600px" 
+    allow="autoplay">
+  </iframe>
+</div>
+
+<div class="pdf-container">
+  <h3>Beginning Flute: Foundational Technique</h3>
+  <iframe 
+    src="https://drive.google.com/file/d/1GrFcTV-48pY8Cy49vlHDCUYCwwXB9a5_/preview" 
+    width="100%" 
+    height="600px" 
+    allow="autoplay">
+  </iframe>
+</div>
+
+<div class="pdf-container">
+  <h3>4th Grade Instrumental: First Year Band Essentials</h3>
+  <iframe 
+    src="https://drive.google.com/file/d/1nh5xeLdRVcyvESyGkYdT4WqkKc9gXQe-/preview" 
+    width="100%" 
+    height="600px" 
+    allow="autoplay">
+  </iframe>
+</div>
+
+<div class="pdf-container">
+  <h3>Lesson Resource: Unit Overview & Instructional Materials</h3>
+  <iframe 
+    src="https://drive.google.com/file/d/106IUDsVf_4sHe92Ev7_4eqLvt9r2WUE3/preview" 
+    width="100%" 
+    height="600px" 
+    allow="autoplay">
+  </iframe>
+</div>
+
 			</section>
 		</main>
 	</body>

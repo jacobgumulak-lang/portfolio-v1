@@ -125,16 +125,20 @@ const name = "Jacob Gumulak";
   color: #4b5563;
 }
 
-/* Tile Grid */
+/* Tile Grid Container */
 .tile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* 'auto-fit' tells the grid to fill the row; 'minmax' prevents squishing */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 2rem;
   max-width: 1100px;
   margin: 0 auto 5rem;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Individual Tiles */
 .tile {
   background: white;
   padding: 2.5rem 1.5rem;
@@ -144,29 +148,32 @@ const name = "Jacob Gumulak";
   border: 1px solid #e5e7eb;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  
+  /* Flexbox inside the tile keeps content centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Ensures padding doesn't add to the width and cause overlaps */
+  box-sizing: border-box; 
+  width: 100%;
 }
 
 .tile:hover {
   transform: translateY(-10px);
   border-color: #2563eb;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.tile-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* Mobile Specific Tweaks */
+@media (max-width: 600px) {
+  .tile-grid {
+    /* Less columns on mobile, forced to 1 column if screen is very small */
+    grid-template-columns: 1fr; 
+    padding: 0 1.5rem;
+  }
 }
-
-.tile h3 {
-  font-size: 1.5rem;
-  color: #111;
-  margin-bottom: 0.5rem;
-}
-
-.tile p {
-  color: #6b7280;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 			@media (max-width: 600px) {
@@ -224,31 +231,26 @@ const name = "Jacob Gumulak";
 
 			<div class="tile-grid">
   <a href="/philosophy" class="tile">
-    <div class="tile-icon">🎶</div>
     <h3>Philosophy</h3>
     <p>My approach to K-12 and Instrumental music education.</p>
   </a>
 
   <a href="/about" class="tile">
-    <div class="tile-icon">🎬</div>
     <h3>About</h3>
     <p>Conducting videos, jazz performances, and classroom observations.</p>
   </a>
 
   <a href="/lessons" class="tile">
-    <div class="tile-icon">📚</div>
     <h3>Lesson Plans</h3>
     <p>Interactive previews of my curriculum and teaching materials.</p>
   </a>
 
   <a href="/media" class="tile">
-    <div class="tile-icon">🎷</div>
     <h3>Media</h3>
     <p>My journey through Moravian University and student teaching.</p>
   </a>
 
     <a href="/resume" class="tile">
-    <div class="tile-icon">🎷</div>
     <h3>Resume</h3>
     <p>My journey through Moravian University and student teaching.</p>
   </a>

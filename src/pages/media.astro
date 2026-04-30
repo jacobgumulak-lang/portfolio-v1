@@ -126,10 +126,23 @@ const name = "Media";
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
-  @media (max-width: 600px) {
-    .page-wrapper { padding: 2rem 1rem; }
-    .content-card { padding: 1.5rem; }
-    h1 { font-size: 2.2rem; }
-    .video-container { margin-bottom: 4rem; }
+@media (max-width: 600px) {
+  .content-card {
+    padding: 1.5rem; /* Less internal padding */
+    border-radius: 16px; /* Slightly smaller corners for small screens */
+    width: 100%;
+    margin: 0; /* Ensure it doesn't push outside the wrapper */
   }
+
+  .header-clean h1 {
+    font-size: 2.2rem; /* Shrink title so it doesn't wrap awkwardly */
+  }
+
+  /* For Resume: ensure the rows (Education/Experience) stack vertically */
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
 </style>

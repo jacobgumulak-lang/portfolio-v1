@@ -3,33 +3,81 @@ const { showNav = true } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Jacob Gumulak | Portfolio</title>
-	</head>
-	<body style="margin:0; padding:0; min-height:100vh; font-family: sans-serif; background-image: url('/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
-		
-		{showNav && (
-    <nav style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 1rem 0; position: sticky; top: 0; z-index: 999; display: block; width: 100%;">
-        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
-            
-            <a href="/" style="font-weight: 800; font-size: 1.5rem; color: #00267A; text-decoration: none;">JG</a>
-            
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="/" style="text-decoration: none; color: #1f2937; font-weight: 600;">Home</a>
-                <a href="/philosophy" style="text-decoration: none; color: #1f2937; font-weight: 600;">Philosophy</a>
-                <a href="/about" style="text-decoration: none; color: #1f2937; font-weight: 600;">About</a>
-                <a href="/lessons" style="text-decoration: none; color: #1f2937; font-weight: 600;">Lessons</a>
-                <a href="/media" style="text-decoration: none; color: #1f2937; font-weight: 600;">Media</a>
-                <a href="/resume" style="text-decoration: none; color: #1f2937; font-weight: 600;">Resume</a>
-            </div>
-        </div>
-    </nav>
-)}
+<html lang="en" style="overflow-x: hidden;">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Jacob Gumulak | Portfolio</title>
+        <style is:global>
+            /* Global reset to prevent elements from exceeding their container width */
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                min-height: 100vh;
+                overflow-x: hidden; /* Prevents horizontal scrolling */
+                font-family: sans-serif;
+                background-image: url('/background.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Keeps background from ending early */
+                background-repeat: no-repeat;
+                background-color: #00267A; /* Fallback color for the bottom of the page */
+            }
 
-		<slot />
+            /* Responsive Navbar Styles */
+            .nav-inner {
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+            }
 
-	</body>
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            @media (max-width: 768px) {
+                .nav-inner {
+                    padding: 0 1rem;
+                    flex-direction: column; /* Stacks JG logo above links on small phones */
+                    gap: 0.8rem;
+                }
+                .nav-links {
+                    gap: 0.8rem;
+                    flex-wrap: wrap; /* Allows links to wrap to a new line instead of hanging off */
+                    justify-content: center;
+                }
+                .nav-links a {
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        {showNav && (
+            <nav style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 1rem 0; position: sticky; top: 0; z-index: 999; width: 100%;">
+                <div class="nav-inner">
+                    <a href="/" style="font-weight: 800; font-size: 1.5rem; color: #00267A; text-decoration: none;">JG</a>
+                    
+                    <div class="nav-links">
+                        <a href="/" style="text-decoration: none; color: #1f2937; font-weight: 600;">Home</a>
+                        <a href="/philosophy" style="text-decoration: none; color: #1f2937; font-weight: 600;">Philosophy</a>
+                        <a href="/about" style="text-decoration: none; color: #1f2937; font-weight: 600;">About</a>
+                        <a href="/lessons" style="text-decoration: none; color: #1f2937; font-weight: 600;">Lessons</a>
+                        <a href="/media" style="text-decoration: none; color: #1f2937; font-weight: 600;">Media</a>
+                        <a href="/resume" style="text-decoration: none; color: #1f2937; font-weight: 600;">Resume</a>
+                    </div>
+                </div>
+            </nav>
+        )}
+        <slot />
+    </body>
 </html>

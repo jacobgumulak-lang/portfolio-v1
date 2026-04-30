@@ -1,225 +1,180 @@
 ---
-// You can change these variables to update your site easily!
+import Layout from '../layouts/Layout.astro';
 const name = "Jacob Gumulak";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{name} | Portfolio</title>
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<style>
-			:root {
-				--primary: #3b82f6;
-				--text: #1f2937;
-				--bg: #ffffff;
-			}
-			body { 
-				font-family: 'Inter', sans-serif; 
-				line-height: 1.6; 
-				color: var(--text); 
-				margin: 0;
-				background-color: var(--bg);
-			}
-			.container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 4rem 2rem;
-			}
-			header {
-				margin-bottom: 3rem;
-			}
-			h1 {
-				font-size: 3rem;
-				margin: 0;
-				color: #111;
-			}
-			.role {
-				color: var(--primary);
-				font-weight: 600;
-				font-size: 1.25rem;
-			}
-			.about-section {
-				background: #f9fafb;
-				padding: 2rem;
-				border-radius: 1rem;
-				border: 1px solid #e5e7eb;
-			}
-			h2 {
-				margin-top: 0;
-				font-size: 1.5rem;
-			}
-			p {
-				font-size: 1.125rem;
-				color: #4b5563;
-			}
+<Layout>
+    <main class="container">
+        <header class="welcome-header">
+            <h1>{name}</h1>
+        </header>
 
-			.school-link {
-  				color: #00267A;
-  				text-decoration: none;
-  				font-weight: 600;
-  				border-bottom: 1px solid transparent;
-  				transition: all 0.2s ease;
-			}
-			.email-link {
-  				color: #3b82f6;
-				text-decoration: none;
-				font-weight: 500;
-				padding: 4px 8px;
-				background: #eff6ff;
-				border-radius: 3px;
-				transition: all 0.2s;
-			}
-			.email-link:hover {
-  				background: #dbeafe;
-  				color: #1d4ed8;
-			}
+        <section class="about-card">
+            <h2>Welcome!</h2>
+            <p>
+                Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of 
+                <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, 
+                majoring in PK-12 Music Education with a concentration in Jazz Saxophone. 
+            </p>
+            <p>
+                On this website, you will find information on my personal growth and development as an educator and musician, 
+                snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me 
+                outside of music. 
+            </p>
+            <div class="contact-info">
+                <p>
+                    Questions? Contact me via email: 
+                    <a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a> 
+                    or by cell at <strong>(908)-619-7586</strong>.
+                </p>
+            </div>
+        </section>
 
-			/* Welcome Section */
-.welcome-section {
-  text-align: center;
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-}
+        <div class="tile-grid">
+            <a href="/philosophy" class="tile">
+                <h3>Philosophy</h3>
+                <p>My approach to K-12 and Instrumental music education.</p>
+            </a>
 
-.welcome-section h1 {
-  font-size: 2.5rem;
-  color: #111;
-  margin-bottom: 1.5rem;
-}
+            <a href="/about" class="tile">
+                <h3>About Me</h3>
+                <p>My background, journey, and life outside of the classroom.</p>
+            </a>
 
-.welcome-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #4b5563;
-}
+            <a href="/lessons" class="tile">
+                <h3>Lesson Plans</h3>
+                <p>Curriculum materials and interactive teaching resources.</p>
+            </a>
 
-/* Tile Grid Container */
-.tile-grid {
-  display: grid;
-  /* 'auto-fit' tells the grid to fill the row; 'minmax' prevents squishing */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto 5rem;
-  padding: 0 2rem;
-  width: 100%;
-  box-sizing: border-box;
-}
+            <a href="/media" class="tile">
+                <h3>Media</h3>
+                <p>Performance videos, conducting, and classroom observations.</p>
+            </a>
 
-/* Individual Tiles */
-.tile {
-  background: white;
-  padding: 2.5rem 1.5rem;
-  border-radius: 15px;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #e5e7eb;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  
-  /* Flexbox inside the tile keeps content centered */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  /* Ensures padding doesn't add to the width and cause overlaps */
-  box-sizing: border-box; 
-  width: 100%;
-}
+            <a href="/resume" class="tile">
+                <h3>Resume</h3>
+                <p>View my professional experience and field work.</p>
+            </a>
+        </div>
+    </main>
+</Layout>
 
-.tile:hover {
-  transform: translateY(-10px);
-  border-color: #2563eb;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
+<style>
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
 
-/* Mobile Specific Tweaks */
-@media (max-width: 600px) {
-  .tile-grid {
-    /* Less columns on mobile, forced to 1 column if screen is very small */
-    grid-template-columns: 1fr; 
-    padding: 0 1.5rem;
-  }
-}
+    .welcome-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
 
-			@media (max-width: 600px) {
-			.nav-container {
-				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
-				justify-content: center; /* Centers tabs on mobile */
-				gap: 0.5rem;
-			}
-			
-			.nav-link {
-				font-size: 0.9rem; /* Slightly smaller text for mobile */
-				padding: 0.4rem 0.6rem;
-				background: #f3f4f6; /* Adds a light "button" feel to each tab */
-				border-radius: 6px;
-			}
+    .welcome-header h1 {
+        font-size: 3.5rem;
+        margin: 0;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-			.contact-tab {
-				margin-left: 0; /* Resets the "push to right" on mobile */
-				width: 100%; /* Makes contact button full width on mobile */
-				text-align: center;
-				margin-top: 0.5rem;
-			}
-			}
+    .role {
+        font-size: 1.25rem;
+        color: #2563eb;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
 
-			.nav-link:hover {
-				color: #3b82f6; /* Turns blue when you hover */
-			}
+    .about-card {
+        background: rgba(255, 255, 255, 0.92);
+        padding: 2.5rem;
+        border-radius: 20px;
+        margin-bottom: 4rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
 
-			.school-link:hover {
-  				color: #2563eb; /* Darker blue on hover */
-  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
-			}
-		</style>
-	</head>
-	<body>
-		<main class="container">
-			<header>
-				<h1>{name}</h1>
-			</header>
+    .about-card h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        color: #111;
+    }
 
-			<section class="about-section">
-				<h2>Welcome!</h2>
-				<p>Thank you for visiting my e-portfolio! My name is Jacob Gumulak, an upcoming graduate of <a href="https://www.moravian.edu" target="_blank" class="school-link">Moravian University</a>, majoring in PK-12 Music Education with a concentration in Jazz Saxophone. On this website, you will find information on my personal growth and development as an educator and musician, snapshots of my classroom teaching and performances, my teaching philosophy, as well as a little about me outside of music. If you have any questions, please feel free to contact me via email (<a href="mailto:jacobgumulak@gmail.com" class="email-link">jacobgumulak@gmail.com</a>), or by cell at (908)-619-7586 .</p>
-			</section>
+    .about-card p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #374151;
+        margin-bottom: 1.5rem;
+    }
 
-			<div class="tile-grid">
-  <a href="/philosophy" class="tile">
-    <h3>Philosophy</h3>
-    <p>My approach to K-12 and Instrumental music education.</p>
-  </a>
+    .contact-info {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e5e7eb;
+    }
 
-  <a href="/about" class="tile">
-    <h3>About</h3>
-    <p>Conducting videos, jazz performances, and classroom observations.</p>
-  </a>
+    .school-link {
+        color: #00267A;
+        font-weight: 700;
+        text-decoration: underline;
+    }
 
-  <a href="/lessons" class="tile">
-    <h3>Lesson Plans</h3>
-    <p>Interactive previews of my curriculum and teaching materials.</p>
-  </a>
+    .email-link {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+    }
 
-  <a href="/media" class="tile">
-    <h3>Media</h3>
-    <p>My journey through Moravian University and student teaching.</p>
-  </a>
+    /* Tiles */
+    .tile-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
 
-    <a href="/resume" class="tile">
-    <h3>Resume</h3>
-    <p>My journey through Moravian University and student teaching.</p>
-  </a>
-</div>
+    .tile {
+        background: white;
+        padding: 2.5rem 1.5rem;
+        border-radius: 15px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border: 1px solid #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-		</main>
-	</body>
-</html>
+    .tile:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+        border-color: #2563eb;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tile h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        color: #000000;
+    }
+
+    .tile p {
+        font-size: 1rem;
+        color: #6b7280;
+        margin: 0;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+        .welcome-header h1 { font-size: 2.5rem; }
+        .container { padding: 2rem 1rem; }
+        .tile-grid { grid-template-columns: 1fr; }
+    }
+</style>

@@ -1,362 +1,252 @@
 ---
+import Layout from '../layouts/Layout.astro';
 const name = "Resume";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{name} | Portfolio</title>
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<style>
-			:root {
-				--primary: #3b82f6;
-				--text: #1f2937;
-				--bg: #ffffff;
-			}
-			body { 
-				font-family: 'Inter', sans-serif; 
-				line-height: 1.6; 
-				color: var(--text); 
-				margin: 0;
-				background-color: var(--bg);
-			}
-			.container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 4rem 2rem;
-			}
-			header {
-				margin-bottom: 3rem;
-			}
-			h1 {
-				font-size: 3rem;
-				margin: 0;
-				color: #111;
-			}
-			.role {
-				color: var(--primary);
-				font-weight: 600;
-				font-size: 1.25rem;
-			}
-			.about-section {
-				background: #f9fafb;
-				padding: 2rem;
-				border-radius: 1rem;
-				border: 1px solid #e5e7eb;
-			}
-			h2 {
-				margin-top: 0;
-				font-size: 1.5rem;
-			}
-			p {
-				font-size: 1.125rem;
-				color: #4b5563;
-			}
+<Layout showNav={true}>
+  <div class="page-wrapper">
+    <main class="content-card">
 
-			.school-link {
-  				color: #00267A;
-  				text-decoration: none;
-  				font-weight: 600;
-  				border-bottom: 1px solid transparent;
-  				transition: all 0.2s ease;
-			}
+      <section class="resume-container">
+        <header class="resume-header">
+          <h2>Jacob Gumulak</h2>
+          <p>
+            jacobgumulak@gmail.com | (908)-619-7586 | Bethlehem, PA
+          </p>
+          <p>
+            <a href="https://drive.google.com/file/d/1mdw6mxp3Ke8vRkdmUZuiLHuwUyqijkZI/view?usp=sharing" target="_blank" class="coverletter-link">Cover Letter</a>
+          </p>
+        </header>
 
-            .coverletter-link {
-                color: #3b82f6;
-                text-decoration: none;
-                font-weight: 400;
-            }
-			.email-link {
-  				color: #3b82f6;
-				text-decoration: none;
-				font-weight: 500;
-				padding: 4px 8px;
-				background: #eff6ff;
-				border-radius: 3px;
-				transition: all 0.2s;
-			}
-			.email-link:hover {
-  				background: #dbeafe;
-  				color: #1d4ed8;
-			}
-			.navbar {
-				background-color: #ffffff;
-				border-bottom: 1px solid #e5e7eb;
-				padding: 1rem 0;
-				position: sticky;
-				top: 0;
-				z-index: 100;
-			}
+        <div class="resume-section">
+          <h3>Education</h3>
+          <div class="entry">
+            <div class="row">
+              <strong>Moravian University</strong>
+              <span>Bethlehem, PA</span>
+            </div>
+            <div class="row">
+              <span>Bachelor of Music, PK-12 Education</span>
+              <span>May 2026</span>
+            </div>
+            <p class="stats">GPA: 3.02 | Dean’s List (2025)</p>
+            <p class="awards">
+              <strong>Awards & Honors:</strong> Winner, Moravian University Concerto Competition (2025); Al Lazaro Memorial Jazz Prize (2025); Distinguished Young Musician Award (2022-2026); John H. Reimers Music Scholarship (2025-2026).
+            </p>
+          </div>
+        </div>
 
-			.nav-container {
-				max-width: 800px;
-				margin: 0 auto;
-				display: flex;
-				align-items: center;
-				padding: 0 1.5rem;
-			}
+        <div class="resume-section">
+          <h3>Field Experience</h3>
+          
+          <div class="entry">
+            <div class="row">
+              <strong>Southern Lehigh High School</strong>
+              <span>Center Valley, PA</span>
+            </div>
+            <p class="role">Student Teaching: 9-12 Band, Orchestra, Jazz, & 4th Grade Instrumental | March–May 2026</p>
+            <ul>
+              <li>Co-taught concert band, string orchestra, symphony orchestra, and two jazz ensembles.</li>
+              <li>Taught fourth grade band lessons at the intermediate school level.</li>
+            </ul>
+          </div>
 
-			.nav-link {
-			text-decoration: none;
-			color: #4b5563;
-			font-weight: 500;
-			font-size: 1rem;
-			transition: color 0.2s;
-			padding: 0.5rem 0.75rem;
-			}
+          <div class="entry">
+            <div class="row">
+              <strong>Cheston/March Elementary Schools</strong>
+              <span>Easton, PA</span>
+            </div>
+            <p class="role">Student Teaching: 4th–5th Grade Instrumental Music | Jan–March 2026</p>
+            <ul>
+              <li>Managed instrumental lessons and ensembles across two elementary school buildings.</li>
+            </ul>
+          </div>
 
-			@media (max-width: 600px) {
-			.nav-container {
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 0.5rem;
-			}
-			
-			.nav-link {
-				font-size: 0.9rem;
-				padding: 0.4rem 0.6rem;
-				background: #f3f4f6;
-				border-radius: 6px;
-			}
+          <div class="entry">
+            <div class="row">
+              <strong>Northampton Area Middle School</strong>
+              <span>Northampton, PA</span>
+            </div>
+            <p class="role">Pre-Student Teaching: 7th–8th Grade General Music and Choir | Sept–Nov 2025</p>
+            <ul>
+              <li>Integrated technology into 8th grade general music to teach jazz history.</li>
+              <li>Led 7th grade choir rehearsals using functional piano skills and Kodály methods.</li>
+            </ul>
+          </div>
+        </div>
 
-			.contact-tab {
-				margin-left: 0;
-				width: 100%;
-				text-align: center;
-				margin-top: 0.5rem;
-			}
-			}
+        <div class="resume-section">
+          <h3>Research & Presentations</h3>
+          <div class="entry">
+            <strong>Lead Researcher: Rediscovering the Hollywood Saxophone Quartet (SOAR)</strong>
+            <ul>
+              <li>Presented findings at the Jazz Education Network (JEN) Conference in Atlanta, GA (Jan 2025).</li>
+              <li>Invited to perform at the COTA festival (Sept 2025) and PMEA Conference (April 2026).</li>
+              <li>Co-researched history and music using academic resources and University-owned materials.</li>
+            </ul>
+          </div>
+        </div>
 
-			.nav-link:hover {
-				color: #3b82f6;
-			}
+        <div class="resume-section">
+          <h3>Skills & Certifications</h3>
+          <p><strong>Musicianship:</strong> Concentration in Jazz Saxophone; Proficient in Woodwinds, Brass, Strings, and Percussion. Active in University Choir, Jazz Band, and Saxophone Quartet.</p>
+          <p><strong>Technology:</strong> Proficient in Musescore, Finale, Soundtrap, Garageband, FL Studio, SmartMusic, Flat.io, and Canva.</p>
+          <p><strong>Certifications & Clearances:</strong> CPR/AED/First Aid Certified (Exp. 2028). PA Clearances: Act 34, 151, 114.</p>
+          <p><strong>Affiliations:</strong> NAfME, PMEA, JEN.</p>
+        </div>
 
-			.school-link:hover {
-  				color: #2563eb;
-  				border-bottom: 1px solid #2563eb;
-			}
-.resume-container {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #1f2937;
-}
+        <div class="button-container">
+          <a href="/jacob.gumulak.resume.pdf" download class="download-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download My Resume
+          </a>
+        </div>
 
-.resume-header {
-  text-align: center;
-  border-bottom: 2px solid #111;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-}
+      </section>
+    </main>
+  </div>
+</Layout>
 
-.resume-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.resume-section {
-  margin-bottom: 2rem;
-}
-
-.resume-section h3 {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #2563eb;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 1rem;
-  padding-bottom: 0.25rem;
-}
-
-.entry {
-  margin-bottom: 1.5rem;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.role {
-  font-style: italic;
-  font-weight: 500;
-  color: #4b5563;
-  margin: 0.25rem 0;
-}
-
-.stats, .awards {
-  font-size: 0.95rem;
-  margin: 0.5rem 0;
-}
-
-ul {
-  margin-top: 0.5rem;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Centers the button on the page */
-  margin: 2rem 0;
-}
-
-.download-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #2563eb; /* Matches your professional blue */
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.download-button:hover {
-  background-color: #1d4ed8;
-  transform: translateY(-2px); /* Gives a slight "lift" on hover */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-}
-
-.download-button:active {
-  transform: translateY(0);
-}
-
-.icon {
-  /* Keeps the SVG icon aligned with the text */
-  margin-top: 2px;
-}
-
-@media (max-width: 600px) {
-  .row {
-    flex-direction: column;
+<style>
+  /* 1. Page Background Alignment */
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
   }
 
-}
-		</style>
-	</head>
-	<body>
-		<nav class="navbar">
-  			<div class="nav-container">
-    			<a href="/" class="nav-link">Home</a>
-				<a href="/philosophy" class="nav-link">Philosophy</a>
-    			<a href="/about" class="nav-link">About</a>
-    			<a href="/lessons" class="nav-link">Lesson Plans</a>
-    			<a href="/media" class="nav-link">Media</a>
-				<a href="/resume" class="nav-link">Resume</a>
-  	</div>
-</nav>
-		<main class="container">
-<section class="resume-container">
-<section class="resume-container">
-  <header class="resume-header">
-    <h1>Jacob Gumulak</h1>
-    <p>
-      jacobgumulak@gmail.com | (908)-619-7586 | Bethlehem, PA
-    </p>
-    <p>
-          <a href="https://drive.google.com/file/d/1mdw6mxp3Ke8vRkdmUZuiLHuwUyqijkZI/view?usp=sharing" target="_blank" class="email-link">Cover Letter</a>
-    </p>
-  </header>
+  /* 2. The Glass Box (Content Card) */
+  .content-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 900px;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
 
-  <div class="resume-section">
-    <h3>Education</h3>
-    <div class="entry">
-      <div class="row">
-        <strong>Moravian University</strong>
-        <span>Bethlehem, PA</span>
-      </div>
-      <div class="row">
-        <span>Bachelor of Music, PK-12 Education</span>
-        <span>May 2026</span>
-      </div>
-      <p class="stats">GPA: 3.02 | Dean’s List (2025)</p>
-      <p class="awards">
-        <strong>Awards & Honors:</strong> Winner, Moravian University Concerto Competition (2025); Al Lazaro Memorial Jazz Prize (2025); Distinguished Young Musician Award (2022-2026); John H. Reimers Music Scholarship (2025-2026).
-      </p>
-    </div>
-  </div>
+  /* 3. Clean Header Gap */
+  .header-clean {
+    margin-bottom: 4rem;
+  }
 
-  <div class="resume-section">
-    <h3>Field Experience</h3>
-    
-    <div class="entry">
-      <div class="row">
-        <strong>Southern Lehigh High School</strong>
-        <span>Center Valley, PA</span>
-      </div>
-      <p class="role">Student Teaching: 9-12 Band, Orchestra, Jazz, & 4th Grade Instrumental | March–May 2026</p>
-      <ul>
-        <li>Co-taught concert band, string orchestra, symphony orchestra, and two jazz ensembles.</li>
-        <li>Taught fourth grade band lessons at the intermediate school level.</li>
-      </ul>
-    </div>
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #111;
+    font-weight: 800;
+  }
 
-    <div class="entry">
-      <div class="row">
-        <strong>Cheston/March Elementary Schools</strong>
-        <span>Easton, PA</span>
-      </div>
-      <p class="role">Student Teaching: 4th–5th Grade Instrumental Music | Jan–March 2026</p>
-      <ul>
-        <li>Managed instrumental lessons and ensembles across two elementary school buildings.</li>
-      </ul>
-    </div>
+  /* 4. Resume Body Styling */
+  .resume-header {
+    text-align: center;
+    border-bottom: 2px solid #111;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+  }
 
-    <div class="entry">
-      <div class="row">
-        <strong>Northampton Area Middle School</strong>
-        <span>Northampton, PA</span>
-      </div>
-      <p class="role">Pre-Student Teaching: 7th–8th Grade General Music and Choir | Sept–Nov 2025</p>
-      <ul>
-        <li>Integrated technology into 8th grade general music to teach jazz history.</li>
-        <li>Led 7th grade choir rehearsals using functional piano skills and Kodály methods.</li>
-      </ul>
-    </div>
-  </div>
+  .resume-header h2 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    color: #111;
+  }
 
-  <div class="resume-section">
-    <h3>Research & Presentations</h3>
-    <div class="entry">
-      <strong>Lead Researcher: Rediscovering the Hollywood Saxophone Quartet (SOAR)</strong>
-      <ul>
-        <li>Presented findings at the Jazz Education Network (JEN) Conference in Atlanta, GA (Jan 2025).</li>
-        <li>Invited to perform at the COTA festival (Sept 2025) and PMEA Conference (April 2026).</li>
-        <li>Co-researched history and music using academic resources and University-owned materials.</li>
-      </ul>
-    </div>
-  </div>
+  .resume-section {
+    margin-bottom: 2.5rem;
+  }
 
-  <div class="resume-section">
-    <h3>Skills & Certifications</h3>
-    <p><strong>Musicianship:</strong> Concentration in Jazz Saxophone; Proficient in Woodwinds, Brass, Strings, and Percussion. Active in University Choir, Jazz Band, and Saxophone Quartet.</p>
-    <p><strong>Technology:</strong> Proficient in Musescore, Finale, Soundtrap, Garageband, FL Studio, SmartMusic, Flat.io, and Canva.</p>
-    <p><strong>Certifications & Clearances:</strong> CPR/AED/First Aid Certified (Exp. 2028). PA Clearances: Act 34, 151, 114.</p>
-    <p><strong>Affiliations:</strong> NAfME, PMEA, JEN.</p>
-  </div>
+  .resume-section h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2563eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+  }
 
-<div class="button-container">
-  <a href="/jacob.gumulak.resume.pdf" download class="download-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-    Download My Resume
-  </a>
-</div>
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+  }
 
-</section>
-		</main>
-	</body>
-</html>
+  .role {
+    font-style: italic;
+    font-weight: 500;
+    color: #4b5563;
+    margin: 0.25rem 0;
+  }
+
+  .stats, .awards {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* 5. Links & Button Styling */
+  .coverletter-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 8px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  .coverletter-link:hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: #1d4ed8;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .download-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    margin-top: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .page-wrapper { padding: 2rem 1rem; }
+    .content-card { padding: 1.5rem; }
+    h1 { font-size: 2.2rem; }
+    .row { flex-direction: column; }
+  }
+</style>

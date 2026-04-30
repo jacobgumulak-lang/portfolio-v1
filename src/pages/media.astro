@@ -1,227 +1,135 @@
 ---
-// You can change these variables to update your site easily!
+import Layout from '../layouts/Layout.astro';
 const name = "Media";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{name} | Portfolio</title>
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<style>
-			:root {
-				--primary: #3b82f6;
-				--text: #1f2937;
-				--bg: #ffffff;
-			}
-			body { 
-				font-family: 'Inter', sans-serif; 
-				line-height: 1.6; 
-				color: var(--text); 
-				margin: 0;
-				background-color: var(--bg);
-			}
-			.container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 4rem 2rem;
-			}
-			header {
-				margin-bottom: 3rem;
-			}
-			h1 {
-				font-size: 3rem;
-				margin: 0;
-				color: #111;
-			}
-			.role {
-				color: var(--primary);
-				font-weight: 600;
-				font-size: 1.25rem;
-			}
-			.about-section {
-				background: #f9fafb;
-				padding: 2rem;
-				border-radius: 1rem;
-				border: 1px solid #e5e7eb;
-			}
-			h2 {
-				margin-top: 0;
-				font-size: 1.5rem;
-			}
-			p {
-				font-size: 1.125rem;
-				color: #4b5563;
-			}
+<Layout showNav={true}>
+  <div class="page-wrapper">
+    <main class="content-card">
+      
+      <header class="header-clean">
+        <h1>{name}</h1>
+      </header>
 
-			.school-link {
-  				color: #00267A;
-  				text-decoration: none;
-  				font-weight: 600;
-  				border-bottom: 1px solid transparent;
-  				transition: all 0.2s ease;
-			}
-			.email-link {
-  				color: #3b82f6;
-				text-decoration: none;
-				font-weight: 500;
-				padding: 4px 8px;
-				background: #eff6ff;
-				border-radius: 3px;
-				transition: all 0.2s;
-			}
-			.email-link:hover {
-  				background: #dbeafe;
-  				color: #1d4ed8;
-			}
-			.navbar {
-				background-color: #ffffff;
-				border-bottom: 1px solid #e5e7eb;
-				padding: 1rem 0;
-				position: sticky;
-				top: 0;
-				z-index: 100;
-			}
+      <section class="media-grid">
+        
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/uO6Z5FiQ3k8?si=mMbG3b0tS4yKQCoh&amp;start=20" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <div class="title-frame-below">
+            <p class="video-caption">
+              Performance Highlight: André Waignein's "Rhapsody for Alto Saxophone and Orchestra" with the Moravian University Community Orchestra
+            </p>
+          </div>
+        </div>
 
-			.nav-container {
-				max-width: 800px;
-				margin: 0 auto;
-				display: flex;
-				align-items: center;
-				padding: 0 1.5rem;
-			}
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/g2U-y9OWqSg?si=5ho0s7IeSZaBP9tb&amp;start=86" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <div class="title-frame-below">
+            <p class="video-caption">
+              Performance Highlight: Kris Berg's "Lifelong Friends" with the Moravian University BIG Band
+            </p>
+          </div>
+        </div>
 
-			.nav-link {
-			text-decoration: none;
-			color: #4b5563;
-			font-weight: 500;
-			font-size: 1rem;
-			transition: color 0.2s;
-			padding: 0.5rem 0.75rem; /* Makes the clickable area bigger for thumbs */
-			}
+        <div class="video-container">
+          <iframe 
+            src="https://drive.google.com/file/d/1xDfBHsegva9u2NhxF7AiSvaUO3Mkq68Q/preview" 
+            title="Google Drive video player" 
+            allow="autoplay" 
+            allowfullscreen>
+          </iframe>
+          <div class="title-frame-below">
+            <p class="video-caption">
+              Conducting: Serenade no. 9 Finale "Posthorn" - Mozart, played by the Southern Lehigh High School Symphony Orchestra
+            </p>
+          </div>
+        </div>
 
-			@media (max-width: 600px) {
-			.nav-container {
-				flex-wrap: wrap; /* Allows tabs to drop to a second line if needed */
-				justify-content: center; /* Centers tabs on mobile */
-				gap: 0.5rem;
-			}
-			
-			.nav-link {
-				font-size: 0.9rem; /* Slightly smaller text for mobile */
-				padding: 0.4rem 0.6rem;
-				background: #f3f4f6; /* Adds a light "button" feel to each tab */
-				border-radius: 6px;
-			}
+      </section>
+    </main>
+  </div>
+</Layout>
 
-			.contact-tab {
-				margin-left: 0; /* Resets the "push to right" on mobile */
-				width: 100%; /* Makes contact button full width on mobile */
-				text-align: center;
-				margin-top: 0.5rem;
-			}
-			}
+<style>
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
 
-			.nav-link:hover {
-				color: #3b82f6; /* Turns blue when you hover */
-			}
+  .content-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 900px;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
 
-			.school-link:hover {
-  				color: #2563eb; /* Darker blue on hover */
-  				border-bottom: 1px solid #2563eb; /* Underline appears only on hover */
-			}
-.video-wrapper {
-  max-width: 800px; /* Professional viewing width */
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  /* --- HEADER CLEAN UP --- */
+  .header-clean {
+    margin-bottom: 4rem;
+    /* Removed all borders and backgrounds */
+  }
 
-/* This targets your YouTube iframe specifically */
-iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* This is the magic line for YouTube videos */
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #111;
+    font-weight: 800;
+  }
 
-.video-caption {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #374151;
-  font-weight: 500;
-  text-align: center;
-}
-		</style>
-	</head>
-	<body>
-		<nav class="navbar">
-  			<div class="nav-container">
-    			<a href="/" class="nav-link">Home</a>
-				<a href="/philosophy" class="nav-link">Philosophy</a>
-    			<a href="/about" class="nav-link">About</a>
-    			<a href="/lessons" class="nav-link">Lesson Plans</a>
-    			<a href="/media" class="nav-link">Media</a>
-				<a href="/resume" class="nav-link">Resume</a>
-  	</div>
-</nav>
-		<main class="container">
-			<header>
-				<h1>{name}</h1>
-			</header>
+  /* --- VIDEO WRAPPER & SPACING --- */
+  .video-container {
+    margin-bottom: 7rem;
+    width: 100%;
+  }
 
-			<section class="about-section">
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/uO6Z5FiQ3k8?si=mMbG3b0tS4yKQCoh&amp;start=20" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-  
-  <p class="video-caption">
-    Performance Highlight: André Waignein's "Rhapsody for Alto Saxophone and Orchestra" with the Moravian University Community Orchestra
-  </p>
-</div>
+  .title-frame-below {
+    padding: 1.5rem;
+    background-color: rgba(249, 250, 251, 0.6); 
+    border-left: 5px solid #2563eb;
+    margin-top: 1.5rem;
+    border-radius: 0 8px 8px 0;
+  }
 
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/g2U-y9OWqSg?si=5ho0s7IeSZaBP9tb&amp;start=86" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-  
-  <p class="video-caption">
-    Performance Highlight: Kris Berg's "Lifelong Friends" with the Moravian University BIG Band
-  </p>
-</div>
+  .video-caption {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 600;
+    line-height: 1.5;
+  }
 
-<div class="video-wrapper">
-  <iframe 
-    src="https://drive.google.com/file/d/1xDfBHsegva9u2NhxF7AiSvaUO3Mkq68Q/preview" 
-    title="Google Drive video player" 
-    allow="autoplay" 
-    allowfullscreen>
-  </iframe>
-  
-  <p class="video-caption">
-    Conducting: Serenade no. 9 Finale "Posthorn" - Mozart, played by the Southern Lehigh High School Symphony Orchestra
-  </p>
-</div>
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
 
-			</section>
-		</main>
-	</body>
-</html>
+  @media (max-width: 600px) {
+    .page-wrapper { padding: 2rem 1rem; }
+    .content-card { padding: 1.5rem; }
+    h1 { font-size: 2.2rem; }
+    .video-container { margin-bottom: 4rem; }
+  }
+</style>

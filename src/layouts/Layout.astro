@@ -1,32 +1,35 @@
+---
+const { showNav = true } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Jacob Gumulak | Portfolio</title>
 	</head>
-	<body>
+	<body style="margin:0; padding:0; min-height:100vh; font-family: sans-serif; background-image: url('/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+		
+		{showNav && (
+    <nav style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 1rem 0; position: sticky; top: 0; z-index: 999; display: block; width: 100%;">
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
+            
+            <a href="/" style="font-weight: 800; font-size: 1.5rem; color: #00267A; text-decoration: none;">JG</a>
+            
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="/" style="text-decoration: none; color: #1f2937; font-weight: 600;">Home</a>
+                <a href="/philosophy" style="text-decoration: none; color: #1f2937; font-weight: 600;">Philosophy</a>
+                <a href="/about" style="text-decoration: none; color: #1f2937; font-weight: 600;">About</a>
+                <a href="/lessons" style="text-decoration: none; color: #1f2937; font-weight: 600;">Lessons</a>
+                <a href="/media" style="text-decoration: none; color: #1f2937; font-weight: 600;">Media</a>
+                <a href="/resume" style="text-decoration: none; color: #1f2937; font-weight: 600;">Resume</a>
+            </div>
+        </div>
+    </nav>
+)}
+
 		<slot />
+
 	</body>
 </html>
-
-<style is:global>
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		min-height: 100vh;
-		font-family: 'Inter', sans-serif;
-	}
-
-	body {
-		/* This looks into your 'public' folder automatically */
-		background-image: url('/background.jpg');
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-	}
-</style>

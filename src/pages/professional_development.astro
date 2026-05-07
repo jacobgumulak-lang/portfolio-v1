@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+const name = "Professional Development";
+---
+
+<Layout showNav={true}>
+  <div class="page-wrapper">
+    <main class="content-card">
+      
+      <header class="header-clean">
+        <h1>{name}</h1>
+      </header>
+
+      <section class="org-list">
+        
+        <div class="org-entry">
+          <div class="title-frame-centered">
+            <h3>NAfME: National Association for Music Education</h3>
+          </div>
+          
+          <div class="entry-content">
+            <h4 class="label">Description</h4>
+            <p>
+              The National Association for Music Education (NAfME) is one of the world’s largest arts education organizations and serves as the primary national voice for music educators. It provides leadership, professional development, and advocacy to ensure that every student has access to a high-quality music curriculum. As a national umbrella, it sets the standards for music education across the United States.
+            </p>
+
+            <h4 class="label">Mission Statement</h4>
+            <div class="mission-callout">
+              <p>"To advance music education by promoting the understanding and making of music by all."</p>
+            </div>
+
+            <div class="link-container">
+              <a href="https://nafme.org/" target="_blank" class="org-link">
+                Visit NAfME Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="org-entry">
+          <div class="title-frame-centered">
+            <h3>PMEA: Pennsylvania Music Educators Association</h3>
+          </div>
+          
+          <div class="entry-content">
+            <h4 class="label">Description</h4>
+            <p>
+              The Pennsylvania Music Educators Association (PMEA) is a service organization of over 4,000 members dedicated to promoting and supporting quality music education at the state level. PMEA serves as the state affiliate of NAfME and is the driving force behind Pennsylvania's student festivals (District, Region, and All-State), professional conferences, and local advocacy efforts.
+            </p>
+
+            <h4 class="label">Mission Statement</h4>
+            <div class="mission-callout">
+              <p>"The Pennsylvania Music Educators Association (PMEA) promotes and supports quality music education, learning, and performance as well as moving the state and national standards forward."</p>
+            </div>
+
+            <div class="link-container">
+              <a href="https://www.pmea.net/" target="_blank" class="org-link">
+                Visit PMEA Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="org-entry">
+          <div class="title-frame-centered">
+            <h3>JEN: Jazz Education Network</h3>
+          </div>
+          
+          <div class="entry-content">
+            <h4 class="label">Description</h4>
+            <p>
+              The Jazz Education Network (JEN) is a global non-profit organization that bridges the gap between the jazz community and education. It serves as a hub for teachers, students, and professional performers, focusing on preserving the heritage of jazz while cultivating its future. JEN is widely known for its annual conference, which is one of the premier jazz events in the world.
+            </p>
+
+            <h4 class="label">Mission Statement</h4>
+            <div class="mission-callout">
+              <p>"To advance jazz education, promote performance, and develop new audiences."</p>
+            </div>
+
+            <div class="link-container">
+              <a href="https://jazzednet.org/" target="_blank" class="org-link">
+                Visit JEN Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .content-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 900px;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .header-clean {
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #111;
+    font-weight: 800;
+  }
+
+  h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2563eb;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+
+  .org-entry {
+    margin-bottom: 7rem;
+    width: 100%;
+  }
+
+  .title-frame-centered {
+    background-color: rgba(249, 250, 251, 0.6);
+    border-bottom: 4px solid #2563eb;
+    padding: 1.2rem;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .title-frame-centered h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1f2937;
+    font-weight: 700;
+  }
+
+  .entry-content {
+    padding-top: 2rem;
+  }
+
+  .label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 2rem;
+  }
+
+  .mission-callout {
+    background: rgba(249, 250, 251, 0.6);
+    border-left: 5px solid #2563eb;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2.5rem; /* Gap before link button */
+  }
+
+  .mission-callout p {
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: #111;
+  }
+
+  /* --- LINK STYLING --- */
+  .link-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .org-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .org-link:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    .page-wrapper { padding: 2rem 1rem; }
+    .content-card { padding: 1.5rem; }
+    h1 { font-size: 2.2rem; }
+    .org-entry { margin-bottom: 5rem; }
+  }
+</style>

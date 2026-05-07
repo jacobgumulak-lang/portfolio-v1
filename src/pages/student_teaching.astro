@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+const name = "Student Teaching";
+---
+
+<Layout showNav={true}>
+  <div class="page-wrapper">
+    <main class="content-card">
+      <header>
+        <h1>{name}</h1>
+      </header>
+
+      <div class="philosophy-block">
+      </div>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  /* 1. Positioning the Card */
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  /* 2. The Glass Container */
+  .content-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 800px;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  /* 3. Typography & Spacing (Matching your original style) */
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    color: #111;
+    font-weight: 800;
+  }
+
+  .philosophy-block p {
+    margin-bottom: 1.8rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  /* 4. The Boxed & Italicized Callout (Matching the screenshot) */
+  .final-callout {
+    padding: 1.5rem;
+    background-color: #f9fafb; /* Light grey box inside the glass */
+    border-left: 5px solid #2563eb; /* The blue "stripe" */
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    color: #1f2937 !important;
+  }
+
+@media (max-width: 600px) {
+  .content-card {
+    padding: 1.5rem; /* Less internal padding */
+    border-radius: 16px; /* Slightly smaller corners for small screens */
+    width: 100%;
+    margin: 0; /* Ensure it doesn't push outside the wrapper */
+  }
+
+  .header-clean h1 {
+    font-size: 2.2rem; /* Shrink title so it doesn't wrap awkwardly */
+  }
+
+  /* For Resume: ensure the rows (Education/Experience) stack vertically */
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+</style>

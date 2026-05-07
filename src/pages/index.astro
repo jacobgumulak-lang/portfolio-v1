@@ -28,6 +28,17 @@ const name = "Jacob Gumulak";
                     or by cell at <strong>(908)-619-7586</strong>.
                 </p>
             </div>
+
+            <figure class="featured-image-container">
+                <img 
+                    src="/jazz.trane.jpg" 
+                    alt="Conducting the Southern Lehigh Jazz Trane" 
+                    class="featured-image" 
+                />
+                <figcaption>
+                    Conducting the Southern Lehigh "Jazz Trane" jazz ensemble at the Easton Area High School Jazz Festival
+                </figcaption>
+            </figure>
         </section>
 
         <div class="tile-grid">
@@ -55,11 +66,18 @@ const name = "Jacob Gumulak";
                 <h3>Resume</h3>
                 <p>View my professional experience and field work.</p>
             </a>
+
+            <a href="/professional_development" class="tile">
+                <h3>Professional Development</h3>
+                <p>View the organizations I am a member of.</p>
+            </a>
+
         </div>
     </main>
 </Layout>
 
 <style>
+    /* --- KEEP ALL YOUR EXISTING STYLES --- */
     .container {
         max-width: 1000px;
         margin: 0 auto;
@@ -74,8 +92,8 @@ const name = "Jacob Gumulak";
     .welcome-header h1 {
         font-size: 3.5rem;
         margin: 0;
-        color: #ffffff; /* Your requested white text */
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Slightly stronger shadow for readability */
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .about-card {
@@ -88,36 +106,37 @@ const name = "Jacob Gumulak";
         border: 1px solid rgba(255,255,255,0.3);
     }
 
-    .about-card h2 {
-        margin-top: 0;
-        font-size: 2rem;
-        color: #111;
+    /* --- ADD THESE NEW STYLES FOR THE IMAGE AND CAPTION --- */
+    .featured-image-container {
+        margin: 3rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers image and text */
+        text-align: center;
     }
 
-    .about-card p {
-        font-size: 1.15rem;
-        line-height: 1.8;
-        color: #374151;
-        margin-bottom: 1.5rem;
+    .featured-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
     }
 
-    .contact-info {
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e5e7eb;
+    figcaption {
+        font-size: 1rem;
+        color: #4b5563;
+        font-style: italic;
+        line-height: 1.5;
+        max-width: 80%; /* Keeps text from getting too wide on desktop */
     }
 
-    .school-link {
-        color: #00267A;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    .email-link {
-        color: #2563eb;
-        font-weight: 600;
-        text-decoration: none;
-    }
+    /* --- REST OF YOUR TILES / RESPONSIVE STYLES --- */
+    .about-card h2 { margin-top: 0; font-size: 2rem; color: #111; }
+    .about-card p { font-size: 1.15rem; line-height: 1.8; color: #374151; margin-bottom: 1.5rem; }
+    .contact-info { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; }
+    .school-link { color: #00267A; font-weight: 700; text-decoration: underline; }
+    .email-link { color: #2563eb; font-weight: 600; text-decoration: none; }
 
     .tile-grid {
         display: grid;
@@ -146,35 +165,12 @@ const name = "Jacob Gumulak";
         border-color: #2563eb;
     }
 
-    .tile h3 {
-        font-size: 1.5rem;
-        margin: 0.5rem 0;
-        color: #000000; /* Your requested black text */
+    .tile h3 { font-size: 1.5rem; margin: 0.5rem 0; color: #000; }
+    .tile p { font-size: 1rem; color: #6b7280; margin: 0; }
+
+    @media (max-width: 600px) {
+        .about-card { padding: 1.5rem; border-radius: 16px; }
+        .welcome-header h1 { font-size: 2.5rem; }
+        figcaption { max-width: 100%; font-size: 0.9rem; }
     }
-
-    .tile p {
-        font-size: 1rem;
-        color: #6b7280;
-        margin: 0;
-    }
-
-@media (max-width: 600px) {
-  .content-card {
-    padding: 1.5rem; /* Less internal padding */
-    border-radius: 16px; /* Slightly smaller corners for small screens */
-    width: 100%;
-    margin: 0; /* Ensure it doesn't push outside the wrapper */
-  }
-
-  .header-clean h1 {
-    font-size: 2.2rem; /* Shrink title so it doesn't wrap awkwardly */
-  }
-
-  /* For Resume: ensure the rows (Education/Experience) stack vertically */
-  .row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-  }
-}
 </style>

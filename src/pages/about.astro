@@ -4,73 +4,187 @@ const name = "About Me";
 ---
 
 <Layout showNav={true}>
-  <main class="container">
-    <section class="content-card">
-      <header>
+  <div class="page-wrapper">
+    <main class="content-card">
+      
+      <header class="header-clean">
         <h1>{name}</h1>
       </header>
-      
+
       <section class="about-content">
-        <p>
-         This is the About section.
-        </p>
+        
+        <div class="text-block">
+          <p>
+            My name is Jacob Gumulak, and I am from Phillipsburg, New Jersey. I graduated from Phillipsburg High School in 2022, and from Moravian University in 2026 with my Bachelor’s Degree in PK-12 Music Education. I have been playing the Alto Saxophone since I was in 5th grade, and started in my middle school’s jazz band in 6th (on tenor sax!). Right away, I fell in love with jazz music, and carried my love for it through high school, where I played around the community with a few of my friends.
+          </p>
+        </div>
+
+        <figure class="about-figure">
+          <img src="/hs_jazz.jpg" alt="High School Jazz" class="about-img smaller-img" />
+          <figcaption>playing out in the community with some friends from Phillipsburg</figcaption>
+        </figure>
+
+        <div class="text-block">
+          <p>
+            In eighth grade, I realized that I wanted to pursue a career in music, more specifically in music education. I wanted to follow in the footsteps of the educators that inspired me to pursue music. I was heavily involved in all ensembles my high school had to offer, holding leadership positions in most of them. While I was in high school, I attended the summer jazz workshops hosted by Moravian University, where I got to work with Dr. Neil Wetzel, the head of the jazz department. This heavily influenced my decision to attend Moravian, and I began my studies there in August of 2022.
+          </p>
+        </div>
+
+        <figure class="about-figure">
+          <img src="/recital_picture.jpg" alt="Recital" class="about-img smaller-img" />
+          <figcaption>Me and my family, taken after my senior recital</figcaption>
+        </figure>
+
+        <div class="highlight-box">
+          <p>
+            During my time at Moravian, I have participated in the Marching Band, Choir, Chorale, Grey Hounds (baritone choir), BIG Band, Jazz Combos, and saxophone quartet. Over the summer of 2024, I was given the opportunity to do a research project, funded through a program at Moravian titled SOAR (Student Opportunities for Academic Research). The project was on the Hollywood Saxophone Quartet, whose music had been lost over the years. The University had copies of this lost music, though hand-written. The focus of the project was cleaning up the music using digital notation software (at the time Finale), as well as doing research on the group and studying the music itself. We presented our findings at the 2025 Jazz Education Network (JEN) conference in Atlanta, Georgia. We also performed these pieces at the 2025 COTA (Celebration Of The Arts) Festival in Delaware Water Gap, PA, and at the 2026 PMEA (Pennsylvania Music Educators Association) conference at the Kalahari Convention Center.
+          </p>
+        </div>
+
+        <div class="text-block">
+          <p>
+            During my junior year at Moravian, I started to explore the world of classical saxophone music, and I found that I really enjoyed playing classical music. I won the 2025 concerto competition at Moravian, and performed André Waignein’s “Rhapsody for Saxophone and Orchestra” with the Moravian University Community Orchestra in November 2025.
+          </p>
+        </div>
+
+        <div class="hobby-section">
+          <div class="title-frame-centered">
+            <h3>Interests</h3>
+          </div>
+          <div class="hobby-content">
+            <p>
+              Outside of music, I enjoy working with technology, building computers, anything with nature, cooking, and tending to my African Dwarf Frogs.
+            </p>
+            
+            <figure class="about-figure">
+              <img src="/frogs.jpg" alt="African Dwarf Frogs" class="about-img smallest-img" />
+              <figcaption>My frogs!</figcaption>
+            </figure>
+          </div>
+        </div>
+
       </section>
-    </section>
-  </main>
+    </main>
+  </div>
 </Layout>
 
 <style>
-  /* Local page styling */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
   }
 
-.content-card {
-    background: rgba(255, 255, 255, 0.85); /* Slightly more solid than the nav for readability */
-    padding: 3rem;
-    border-radius: 24px; /* Rounder corners like your image */
+  .content-card {
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    max-width: 900px;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-h1 {
+  .header-clean {
+    margin-bottom: 4rem;
+  }
+
+  h1 {
     font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 2.5rem;
+    margin: 0;
     color: #111;
     font-weight: 800;
   }
 
-  .about-content p {
-    font-size: 1.2rem;
+  h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2563eb;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+
+  .text-block p {
+    font-size: 1.15rem;
     line-height: 1.8;
     color: #374151;
     margin-bottom: 1.5rem;
   }
 
-@media (max-width: 600px) {
-  .content-card {
-    padding: 1.5rem; /* Less internal padding */
-    border-radius: 16px; /* Slightly smaller corners for small screens */
-    width: 100%;
-    margin: 0; /* Ensure it doesn't push outside the wrapper */
+  .highlight-box {
+    background: rgba(37, 99, 235, 0.05);
+    border-left: 5px solid #2563eb;
+    padding: 2rem;
+    border-radius: 0 12px 12px 0;
+    margin: 3rem 0;
   }
 
-  .header-clean h1 {
-    font-size: 2.2rem; /* Shrink title so it doesn't wrap awkwardly */
+  .highlight-box p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: #374151;
   }
 
-  /* For Resume: ensure the rows (Education/Experience) stack vertically */
-  .row {
+  .about-figure {
+    margin: 2.5rem 0;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+    align-items: center;
+    text-align: center;
   }
-}
+
+  .about-img {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+
+  .smaller-img {
+    max-width: 60%;
+  }
+
+  .smallest-img {
+    max-width: 300px;
+  }
+
+  figcaption {
+    font-size: 1rem;
+    color: #4b5563;
+    font-style: italic;
+    line-height: 1.4;
+    max-width: 80%;
+  }
+
+  .hobby-section {
+    margin-top: 4rem;
+  }
+
+  .title-frame-centered {
+    background-color: rgba(249, 250, 251, 0.6);
+    border-bottom: 4px solid #2563eb;
+    padding: 1rem;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .title-frame-centered h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #111;
+  }
+
+  @media (max-width: 600px) {
+    .page-wrapper { padding: 2rem 1rem; }
+    .content-card { padding: 1.5rem; }
+    h1 { font-size: 2.5rem; }
+    .smaller-img, .smallest-img { max-width: 100%; }
+    figcaption { max-width: 100%; font-size: 0.9rem; }
+  }
 </style>
